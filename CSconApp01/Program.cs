@@ -33,7 +33,7 @@ namespace CSconApp01
         void func3()
         { 
             var a = 20; // var 초기화 시점에 타입을 기반으로 추론(일회성)
-            Console.WriteLine($"var a = {a}");
+            Console.WriteLine($"ASCII code '1' = \x31 \u0031 \r\n");    // 16진수표기, 유니코드표기
             a = 10;
             Console.WriteLine($"var a = {a}");
             Object o = a; // Object 모든 type의 원형
@@ -46,6 +46,8 @@ namespace CSconApp01
         void func4()    // C#에서 data type, 배열 모두 객체이다.
         {
             char[] carr = { '헬', '로', '우'};  //new int[100];
+            char a1 = carr[0];
+         
             for(int i = 0; i < carr.Length; i++)
             {
                 Console.Write(carr[i]);
@@ -63,8 +65,8 @@ namespace CSconApp01
             //Console.WriteLine($"(보간)int type의 범위 {int.MinValue},{int.MaxValue} 크기 {sizeof(int)}(byte)."); // $
             //func1();
             //func2();
-            //func3();
-            func4();
+            func3();
+            //func4();
             Console.ReadKey();
         }
     }
